@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+const navlinks = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
+---
+
+<nav class="flex justify-between items-center py-5">
+  <ul class="flex items-center gap-8">
+    <h2 class="text-4xl">NEEDFRSPD</h2>
+    {
+      navlinks.map((link) => (
+        <li class="font-medium">
+          <a href={link.href}>{link.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="font-bold">+1 (365) 440-5686</div>
+</nav>
