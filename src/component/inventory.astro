@@ -1,0 +1,16 @@
+---
+import { cars } from "../data/cars.astro";
+import Car from "./car.astro";
+---
+
+<div class="container mx-auto">
+  <div class="text-4xl font-bold mt-10 mb-5 border-l-6 border-sky-900 pl-4">
+    Inventory
+  </div>
+  <div class="border-b border-gray-300">
+    <br />
+  </div>
+  <div class="mt-10">
+    {cars.map((car) => <Car car={car} />)}
+  </div>
+</div>

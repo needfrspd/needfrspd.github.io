@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { Phone } from "@lucide/astro";
+import Logo from "./logo.astro";
 const navlinks = [
   {
     name: "Home",
@@ -12,9 +14,11 @@ const navlinks = [
 ];
 ---
 
-<nav class="flex justify-between items-center py-5">
+<nav
+  class="flex justify-between items-center py-5 absolute top-0 left-0 right-0 container mx-auto"
+>
   <ul class="flex items-center gap-8">
-    <h2 class="text-4xl">NEEDFRSPD</h2>
+    <Logo />
     {
       navlinks.map((link) => (
         <li class="font-medium">
@@ -23,5 +27,12 @@ const navlinks = [
       ))
     }
   </ul>
-  <div class="font-bold">+1 (365) 440-5686</div>
+  <a
+    href="tel:+13654405686"
+    class="font-bold text-slate-100 tracking-widest border border-slate-100 rounded-2xl px-4 py-2 flex items-center gap-2"
+  >
+    <Phone class="w-4 h-4" />
+    <span class="hidden sm:block">+1 (365) 440-5686</span>
+    <span class="block sm:hidden">Call</span>
+  </a>
 </nav>

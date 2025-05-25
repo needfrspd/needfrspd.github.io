@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import Navbar from "../component/navbar.astro";
+import Hero from "../component/hero.astro";
+import Inventory from "../component/inventory.astro";
 ---
 
 <html lang="en">
@@ -21,7 +23,9 @@ import Navbar from "../component/navbar.astro";
     />
     <title>NeedfrSpd</title>
   </head>
-  <body class="container mx-auto">
+  <body class="w-full">
     <Navbar />
+    <Hero />
+    <Inventory />
   </body>
 </html>
