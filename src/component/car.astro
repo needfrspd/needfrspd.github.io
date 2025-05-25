@@ -1,9 +1,57 @@
 ---
+import { Gauge, Fuel, Cog, ChevronRight } from "@lucide/astro";
 const { car } = Astro.props;
 ---
 
-<div>
-  <div>
-    <img src={car.image} alt={car.name} />
+<div class="max-w-80">
+  <div class="w-full h-48 relative">
+    <img
+      src={car.image[0].src}
+      alt={car.image[0].alt}
+      class="w-full h-full object-cover rounded-t-xl"
+    />
+  </div>
+  <div class="p-4 border-x border-b border-gray-300 rounded-b-xl">
+    <div class="text-xl font-semibold text-neutral-700">
+      {car.brand}
+      {car.model} - {car.year}
+    </div>
+    <div class="text-sm text-neutral-500">
+      {car.variant}
+    </div>
+    <hr class="my-4 border-neutral-300" />
+    <div class="flex items-center gap-4 justify-between">
+      <div class="flex flex-col items-center gap-2">
+        <Gauge class="w-6 h-6 text-neutral-600" />
+        <span class="text-sm text-neutral-500">
+          {car.milage} km
+        </span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <Fuel class="w-6 h-6 text-neutral-600" />
+        <span class="text-sm text-neutral-500">
+          {car.fuelType}
+        </span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <Cog class="w-6 h-6 text-neutral-600" />
+        <span class="text-sm text-neutral-500">
+          {car.transmission}
+        </span>
+      </div>
+    </div>
+    <hr class="my-4 pt-1 border-neutral-300" />
+    <div class="flex items-center justify-between">
+      <div class="text-xl font-semibold text-neutral-700">
+        $ {car.price}
+      </div>
+      <a
+        href="/cars/{car.id}"
+        class="text-sky-900 font-medium text-sm hover:text-red-900 transition-all duration-300 flex items-center gap-2"
+      >
+        View Details
+        <ChevronRight class="w-4 h-4" />
+      </a>
+    </div>
   </div>
 </div>

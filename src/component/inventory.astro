@@ -11,6 +11,12 @@ import Car from "./car.astro";
     <br />
   </div>
   <div class="mt-10">
-    {cars.map((car) => <Car car={car} />)}
+    {
+      cars.map((car) => (
+        <div class="mb-10">
+          <Car car={car} />
+        </div>
+      ))
+    }
   </div>
 </div>
