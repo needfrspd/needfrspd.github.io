@@ -1,17 +1,16 @@
 ---
 import { cars } from "../data/cars.astro";
+import heroImg from "../assets/images/hero-img.png";
 ---
 
 <div
-  class="flex flex-col justify-center bg-[url('../assets/images/hero-img.png')] bg-contain bg-no-repeat w-full h-screen bg-top-right"
+  class="flex items-center h-screen bg-[url('../assets/images/hero-img.png')] bg-contain bg-no-repeat bg-top-right"
 >
-  <div class="md:ml-28 max-w-2xl">
+  <div class="ml-5 md:ml-[10%] max-w-2xl mt-[70%] lg:mt-0">
     <p>Find the best cars on sale near you.</p>
     <div class="text-7xl font-semibold tracking-wide leading-22 my-8">
       {cars.length} Vehicles Available
     </div>
-  </div>
-  <div class="ml-28">
     <a
       href="tel:+13654405686"
       class="px-4 py-2 rounded-xl border border-[#333] hover:bg-sky-900 hover:text-slate-100 hover:border-sky-900 transition-all duration-300"
