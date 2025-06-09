@@ -46,7 +46,7 @@ const { car } = Astro.props;
         $ {car.price}
       </div>
       <a
-        href="/cars/{car.id}"
+        href={`/cars/${car.id}`}
         class="text-sky-900 font-medium text-sm hover:text-red-900 transition-all duration-300 flex items-center gap-2"
       >
         View Details
