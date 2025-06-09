@@ -11,38 +11,38 @@ const { car } = Astro.props;
       class="w-full h-full object-cover rounded-t-xl"
     />
   </div>
-  <div class="p-4 border-x border-b border-gray-300 rounded-b-xl">
-    <div class="text-xl font-semibold text-neutral-700">
+  <div class="p-4 border-x border-b border-neutral-700 rounded-b-xl">
+    <div class="text-xl font-semibold text-neutral-300">
       {car.brand}
       {car.model} - {car.year}
     </div>
-    <div class="text-sm text-neutral-500">
+    <div class="text-sm text-neutral-400">
       {car.variant}
     </div>
-    <hr class="my-4 border-neutral-300" />
+    <hr class="my-4 border-neutral-700" />
     <div class="flex items-center gap-4 justify-between">
       <div class="flex flex-col items-center gap-2">
         <Gauge class="w-6 h-6 text-neutral-600" />
-        <span class="text-sm text-neutral-500">
+        <span class="text-sm text-neutral-400">
           {car.milage} km
         </span>
       </div>
       <div class="flex flex-col items-center gap-2">
         <Fuel class="w-6 h-6 text-neutral-600" />
-        <span class="text-sm text-neutral-500">
+        <span class="text-sm text-neutral-400">
           {car.fuelType}
         </span>
       </div>
       <div class="flex flex-col items-center gap-2">
         <Cog class="w-6 h-6 text-neutral-600" />
-        <span class="text-sm text-neutral-500">
+        <span class="text-sm text-neutral-400">
           {car.transmission}
         </span>
       </div>
     </div>
-    <hr class="my-4 pt-1 border-neutral-300" />
+    <hr class="my-4 pt-1 border-neutral-700" />
     <div class="flex items-center justify-between">
-      <div class="text-xl font-semibold text-neutral-700">
+      <div class="text-xl font-semibold text-neutral-400">
         $ {car.price}
       </div>
       <a
