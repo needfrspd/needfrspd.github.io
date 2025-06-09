@@ -3,14 +3,14 @@ import "../styles/global.css";
 import { Phone } from "@lucide/astro";
 import Logo from "./logo.astro";
 const navlinks = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
+  // {
+  //   name: "Home",
+  //   href: "/",
+  // },
+  // {
+  //   name: "Contact",
+  //   href: "/contact",
+  // },
 ];
 ---
 
@@ -19,13 +19,13 @@ const navlinks = [
 >
   <ul class="flex items-center gap-8">
     <Logo />
-    {
+    <!-- {
       navlinks.map((link) => (
         <li class="font-medium">
           <a href={link.href}>{link.name}</a>
         </li>
       ))
-    }
+    } -->
   </ul>
   <a
     href="tel:+13654405686"
