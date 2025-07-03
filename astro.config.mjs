@@ -7,6 +7,9 @@ export default defineConfig({
   outDir: "docs",
   base: "/",
   site: "https://needfrspd.github.io",
+  build: {
+    assets: "assets",
+  },
   vite: {
     plugins: [tailwindcss()],
   },
