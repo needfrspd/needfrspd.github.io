@@ -1,13 +1,16 @@
 ---
 import { Gauge, Fuel, Cog, ChevronRight } from "@lucide/astro";
+import { Image } from "astro:assets";
 const { car } = Astro.props;
 ---
 
 <div class="max-w-80">
   <div class="w-full h-48 relative">
-    <img
+    <Image
       src={car.image[0].src}
       alt={car.image[0].alt}
+      width={320}
+      height={192}
       class="w-full h-full object-cover rounded-t-xl"
     />
   </div>
