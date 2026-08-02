@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   outDir: "docs",
   base: "/",
-  site: "https://needfrspd.github.io",
+  site: "https://needfrspd.ca",
   build: {
     assets: "assets",
   },
